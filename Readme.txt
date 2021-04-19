@@ -6,3 +6,5 @@ Scaffold-DbContext "Server=DESKTOP-GUK2RJ2;Database=DatabaseFirstSimpleExample;T
 
 Code first:
 Install-Package Microsoft.EntityFrameworkCore.Design
+Add-Migration Initial
+Update-Database
