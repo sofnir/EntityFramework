@@ -19,7 +19,7 @@ namespace DatabaseFirst.Models
         public string Description { get; set; }
         public short FullPrice { get; set; }
         public string LevelString { get; set; }
-        public byte Level { get; set; }
+        public short Level { get; set; }
 
         public virtual Author Author { get; set; }
         public virtual ICollection<CourseSection> CourseSections { get; set; }
