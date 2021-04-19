@@ -9,5 +9,6 @@ namespace DatabaseFirst.Models
     public partial class UserProfile
     {
         public int UserProfileId { get; set; }
+        public string Name { get; set; }
     }
 }
