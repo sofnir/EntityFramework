@@ -60,11 +60,6 @@ namespace DatabaseFirst.Models
                     .HasMaxLength(8000)
                     .IsUnicode(false);
 
-                entity.Property(e => e.LevelString)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
                 entity.Property(e => e.Title)
                     .IsRequired()
                     .HasMaxLength(255)

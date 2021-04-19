@@ -17,8 +17,7 @@ namespace DatabaseFirst.Models
         public int AuthorId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public short FullPrice { get; set; }
-        public string LevelString { get; set; }
+        public short FullPrice { get; set; }        
         public short Level { get; set; }
 
         public virtual Author Author { get; set; }
