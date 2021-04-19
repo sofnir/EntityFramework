@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework", "EntityFramework\EntityFramework.csproj", "{66E5E608-B39C-40AF-AE6F-39548D2787AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeFirstSimpleExample", "EntityFramework\CodeFirstSimpleExample.csproj", "{66E5E608-B39C-40AF-AE6F-39548D2787AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirstSimpleExample", "DatabaseFirstSimpleExample\DatabaseFirstSimpleExample.csproj", "{EDB0F30E-D406-4E64-A54A-1E777F191B8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseFirstSimpleExample", "DatabaseFirstSimpleExample\DatabaseFirstSimpleExample.csproj", "{EDB0F30E-D406-4E64-A54A-1E777F191B8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
