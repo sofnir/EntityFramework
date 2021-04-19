@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Server=DESKTOP-GUK2RJ2;Database=Pluto;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
