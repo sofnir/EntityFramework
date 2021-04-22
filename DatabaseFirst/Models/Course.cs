@@ -18,10 +18,17 @@ namespace DatabaseFirst.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public short FullPrice { get; set; }        
-        public short Level { get; set; }
+        public CourseLevel Level { get; set; }
 
         public virtual Author Author { get; set; }
         public virtual ICollection<CourseSection> CourseSections { get; set; }
         public virtual ICollection<CourseTag> CourseTags { get; set; }
+
+        public enum CourseLevel
+        {
+            Begginer,
+            Intermediate,
+            Advanced
+        }
     }
 }

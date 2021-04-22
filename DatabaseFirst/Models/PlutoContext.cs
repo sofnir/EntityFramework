@@ -69,7 +69,12 @@ namespace DatabaseFirst.Models
                     .WithMany(p => p.Courses)
                     .HasForeignKey(d => d.AuthorId)
                     .HasConstraintName("FK_Courses_Authors");
-            });
+
+                entity.Property(e => e.Level)
+                    .HasConversion(
+                        v => v.ToString(),
+                        v => (Course.CourseLevel)Enum.Parse(typeof(Course.CourseLevel), v));
+            });            
 
             modelBuilder.Entity<CourseSection>(entity =>
             {
