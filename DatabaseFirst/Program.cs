@@ -1,12 +1,28 @@
-﻿using System;
+﻿using DatabaseFirst.Models;
+using System;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace DatabaseFirst
 {
     class Program
     {
-        static void Main(string[] args)
+        static PlutoContext DbContext;
+
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            DbContext = new PlutoContext();
+            
+            await CallStoredProcedureAsync();
+        }
+
+        static private async Task CallStoredProcedureAsync()
+        {
+            var courses = await DbContext.Courses
+                .FromSqlRaw("GetCourses")
+                .ToListAsync();
+
+            courses?.ForEach(q => Console.WriteLine(q.Description));
         }
     }
 }
