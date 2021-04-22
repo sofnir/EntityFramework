@@ -26,9 +26,9 @@ namespace DatabaseFirst.Models
 
         public enum CourseLevel
         {
-            Begginer,
-            Intermediate,
-            Advanced
+            Begginer = 1,
+            Intermediate = 2,
+            Advanced = 3
         }
     }
 }
