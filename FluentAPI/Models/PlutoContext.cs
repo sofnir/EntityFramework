@@ -45,7 +45,8 @@ namespace CodeFirst.Models
             modelBuilder.Entity<Course>()
                 .HasOne(c => c.Author)
                 .WithMany(a => a.Courses)
-                .HasForeignKey(c => c.AuthorId);
+                .HasForeignKey(c => c.AuthorId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             base.OnModelCreating(modelBuilder);
         }
