@@ -14,6 +14,7 @@ namespace CodeFirst.Models
         public CourseLevel Level { get; set; }
         public float FullPrice { get; set; }
         public Author Author { get; set; }
+        public int AuthorId { get; set; }
         public IList<Tag> Tags { get; set; }
 
         public enum CourseLevel
