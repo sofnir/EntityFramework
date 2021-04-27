@@ -1,11 +1,10 @@
-﻿using FluentAPI.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodeFirst.Models
+namespace FluentAPI.Models
 {
     public class Course
     {
