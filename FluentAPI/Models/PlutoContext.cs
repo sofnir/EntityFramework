@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FluentAPI.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,6 +53,11 @@ namespace CodeFirst.Models
                 .HasMany(c => c.Tags)
                 .WithMany(t => t.Courses)
                 .UsingEntity(join => join.ToTable("CourseTags"));
+
+            modelBuilder.Entity<Course>()
+                .HasOne(c => c.Cover)
+                .WithOne(c => c.Course)
+                .HasForeignKey<Cover>(c => c.CourseId);
 
             base.OnModelCreating(modelBuilder);
         }

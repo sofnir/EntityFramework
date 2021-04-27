@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentAPI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace CodeFirst.Models
         public Author Author { get; set; }
         public int AuthorId { get; set; }
         public IList<Tag> Tags { get; set; }
+        public int CoverId { get; set; }
+        public Cover Cover { get; set; }
 
         public enum CourseLevel
         {
