@@ -48,6 +48,11 @@ namespace CodeFirst.Models
                 .HasForeignKey(c => c.AuthorId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            modelBuilder.Entity<Course>()
+                .HasMany(c => c.Tags)
+                .WithMany(t => t.Courses)
+                .UsingEntity(join => join.ToTable("CourseTags"));
+
             base.OnModelCreating(modelBuilder);
         }
     }
