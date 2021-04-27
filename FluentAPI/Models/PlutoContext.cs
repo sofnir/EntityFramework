@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FluentAPI.EntityConfigurations;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,29 +34,10 @@ namespace FluentAPI.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Course>()
-                .Property(c => c.Name)
-                .IsRequired()
-                .HasMaxLength(255);
-
-            modelBuilder.Entity<Course>()
-                .Property(c => c.Description)
-                .IsRequired()
-                .HasMaxLength(2000);
-
-            modelBuilder.Entity<Course>()
-                .HasOne(c => c.Author)
-                .WithMany(a => a.Courses)
-                .HasForeignKey(c => c.AuthorId)
-                .OnDelete(DeleteBehavior.Restrict);            
+            modelBuilder.ApplyConfiguration(new CourseConfiguration());
 
             modelBuilder.Entity<CourseTag>()
                 .HasKey(ct => new { ct.CourseId, ct.TagId });
-
-            modelBuilder.Entity<Course>()
-                .HasOne(c => c.Cover)
-                .WithOne(c => c.Course)
-                .HasForeignKey<Cover>(c => c.CourseId);
 
             base.OnModelCreating(modelBuilder);
         }
