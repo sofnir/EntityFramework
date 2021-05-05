@@ -46,7 +46,15 @@ namespace QueryingLINQ.Models
                 new Tag { Id = 4, Name = "nodejs" },
                 new Tag { Id = 5, Name = "oop" },
                 new Tag { Id = 6, Name = "linq" }
-            );            
+            );
+
+            modelBuilder.Entity<Author>().HasData(
+                new Author { Id = 1, Name = "Mosh hamedani" },
+                new Author { Id = 2, Name = "Anthony Alicea" },
+                new Author { Id = 3, Name = "Eric Wise" },
+                new Author { Id = 4, Name = "Tom Owsiak" },
+                new Author { Id = 5, Name = "John Smith" }
+            );
 
             base.OnModelCreating(modelBuilder);
         }
