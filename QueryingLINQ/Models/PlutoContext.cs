@@ -39,6 +39,15 @@ namespace QueryingLINQ.Models
             modelBuilder.Entity<CourseTag>()
                 .HasKey(ct => new { ct.CourseId, ct.TagId });
 
+            modelBuilder.Entity<Tag>().HasData(
+                new Tag { Id = 1, Name = "c#" },
+                new Tag { Id = 2, Name = "angularjs" },
+                new Tag { Id = 3, Name = "javascript" },
+                new Tag { Id = 4, Name = "nodejs" },
+                new Tag { Id = 5, Name = "oop" },
+                new Tag { Id = 6, Name = "linq" }
+            );            
+
             base.OnModelCreating(modelBuilder);
         }
     }
