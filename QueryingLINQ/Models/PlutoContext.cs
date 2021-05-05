@@ -137,7 +137,19 @@ namespace QueryingLINQ.Models
                     Description = "Description Learn Javascript",
                     Level = Course.CourseLevel.Beginner
                 }
-            );            
+            );
+
+            modelBuilder.Entity<CourseTag>().HasData(
+                new CourseTag { CourseId = 1, TagId = 1 },
+                new CourseTag { CourseId = 2, TagId = 1 },
+                new CourseTag { CourseId = 3, TagId = 1 },
+                new CourseTag { CourseId = 4, TagId = 3 },
+                new CourseTag { CourseId = 5, TagId = 2 },
+                new CourseTag { CourseId = 6, TagId = 4 },
+                new CourseTag { CourseId = 7, TagId = 1 },
+                new CourseTag { CourseId = 8, TagId = 1 },
+                new CourseTag { CourseId = 9, TagId = 3 }
+            );
 
             base.OnModelCreating(modelBuilder);
         }
