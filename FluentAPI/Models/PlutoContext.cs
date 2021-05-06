@@ -22,7 +22,6 @@ namespace FluentAPI.Models
         public DbSet<Course> Courses { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Tag> Tags { get; set; }        
-        public DbSet<CourseTag> CourseTags { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -34,10 +33,7 @@ namespace FluentAPI.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new CourseConfiguration());
-
-            modelBuilder.Entity<CourseTag>()
-                .HasKey(ct => new { ct.CourseId, ct.TagId });
+            modelBuilder.ApplyConfiguration(new CourseConfiguration());            
 
             base.OnModelCreating(modelBuilder);
         }
