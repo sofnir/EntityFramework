@@ -33,6 +33,20 @@ namespace FluentAPI.EntityConfigurations
                 .HasOne(c => c.Cover)
                 .WithOne(c => c.Course)
                 .HasForeignKey<Cover>(c => c.CourseId);
+
+            builder
+                .HasMany(p => p.Tags)
+                .WithMany(p => p.Courses)
+                .UsingEntity<Dictionary<string, object>>(
+                "CourseTag",
+                 j => j
+                    .HasOne<Tag>()
+                    .WithMany()
+                    .HasForeignKey("TagId"),
+                j => j
+                    .HasOne<Course>()
+                    .WithMany()
+                    .HasForeignKey("CourseId"));
         }
     }
 }
