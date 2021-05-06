@@ -22,7 +22,6 @@ namespace QueryingLINQ.Models
         public DbSet<Course> Courses { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Tag> Tags { get; set; }        
-        public DbSet<CourseTag> CourseTags { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -35,9 +34,6 @@ namespace QueryingLINQ.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CourseConfiguration());
-
-            modelBuilder.Entity<CourseTag>()
-                .HasKey(ct => new { ct.CourseId, ct.TagId });
 
             modelBuilder.Entity<Tag>().HasData(
                 new Tag { Id = 1, Name = "c#" },
@@ -137,19 +133,7 @@ namespace QueryingLINQ.Models
                     Description = "Description Learn Javascript",
                     Level = Course.CourseLevel.Beginner
                 }
-            );
-
-            modelBuilder.Entity<CourseTag>().HasData(
-                new CourseTag { CourseId = 1, TagId = 1 },
-                new CourseTag { CourseId = 2, TagId = 1 },
-                new CourseTag { CourseId = 3, TagId = 1 },
-                new CourseTag { CourseId = 4, TagId = 3 },
-                new CourseTag { CourseId = 5, TagId = 2 },
-                new CourseTag { CourseId = 6, TagId = 4 },
-                new CourseTag { CourseId = 7, TagId = 1 },
-                new CourseTag { CourseId = 8, TagId = 1 },
-                new CourseTag { CourseId = 9, TagId = 3 }
-            );
+            );            
 
             base.OnModelCreating(modelBuilder);
         }
