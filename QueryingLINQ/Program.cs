@@ -11,6 +11,11 @@ namespace QueryingLINQ
     {
         static void Main(string[] args)
         {
+            ;
+        }
+
+        static private void SeedData()
+        {
             var seeder = new Seeder();
             seeder.Seed();
             //seeder.RemoveData();
