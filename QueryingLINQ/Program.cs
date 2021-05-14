@@ -10,9 +10,8 @@ namespace QueryingLINQ
     class Program
     {        
         static void Main(string[] args)
-        {            
-            var examples = new ExtensionMethodsExamples();
-            examples.Aggregating();
+        {
+            ;
         }
 
         static private void SeedData()
