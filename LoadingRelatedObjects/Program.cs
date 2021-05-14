@@ -6,7 +6,8 @@ namespace LoadingRelatedObjects
     {
         static void Main(string[] args)
         {
-            ;
+            Examples examples = new Examples();
+            examples.LazyLoading();
         }
     }
 }
