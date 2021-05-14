@@ -25,5 +25,10 @@ namespace QueryingLINQ.Models
             Intermediate = 2,
             Advanced = 3
         }
+
+        public bool IsBeginnerCourse
+        {
+            get { return Level == CourseLevel.Beginner; }
+        }
     }
 }

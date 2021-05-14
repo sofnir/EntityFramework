@@ -19,5 +19,17 @@ namespace QueryingLINQ
             var seeder = new Seeder();
             seeder.Seed();            
         }
+
+        static private void DeferredExecution()
+        {
+            var context = new PlutoContext();
+            
+            //var courses = context.Courses.Where(c => c.IsBeginnerCourse == true); - this will return exception
+
+            var courses = context.Courses.ToList().Where(c => c.IsBeginnerCourse == true);
+
+            foreach (var c in courses)
+                Console.WriteLine(c.Name);
+        }
     }
 }
