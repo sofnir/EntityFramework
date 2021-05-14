@@ -22,6 +22,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentAPI", "FluentAPI\Flue
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryingLINQ", "QueryingLINQ\QueryingLINQ.csproj", "{CD56F11C-667A-4A56-9901-DF16F1CB620D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadingRelatedObjects", "LoadingRelatedObjects\LoadingRelatedObjects.csproj", "{CDE8EDA2-5AD6-4A09-B7B5-118A2CC6D943}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{CD56F11C-667A-4A56-9901-DF16F1CB620D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD56F11C-667A-4A56-9901-DF16F1CB620D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD56F11C-667A-4A56-9901-DF16F1CB620D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDE8EDA2-5AD6-4A09-B7B5-118A2CC6D943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDE8EDA2-5AD6-4A09-B7B5-118A2CC6D943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDE8EDA2-5AD6-4A09-B7B5-118A2CC6D943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDE8EDA2-5AD6-4A09-B7B5-118A2CC6D943}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
