@@ -6,8 +6,7 @@ namespace LoadingRelatedObjects
     {
         static void Main(string[] args)
         {
-            var seeder = new Seeder();
-            seeder.Seed();
+            ;
         }
     }
 }
