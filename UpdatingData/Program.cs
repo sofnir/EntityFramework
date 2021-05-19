@@ -6,8 +6,9 @@ namespace UpdatingData
     {
         static void Main(string[] args)
         {
-            var seeder = new Seeder();
-            seeder.Seed();
+            Examples.AddCourseWithAuthorObject();
+            Examples.AddCourseWithAuthorId();
+            Examples.AddCourseWithAttachedAuthor();            
         }
     }
 }
