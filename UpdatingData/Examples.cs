@@ -101,5 +101,27 @@ namespace UpdatingData
                 context.SaveChanges();
             }
         }
+
+        public static void ChangeTracker()
+        {
+            using (var context = new PlutoContext())
+            {
+                context.Authors.Add(new Author { Name = "New author" });
+
+                var author = context.Authors.Find(3);
+                author.Name = "Updated";
+
+                var authorToRemove = context.Authors.Find(4);
+                context.Authors.Remove(authorToRemove);
+
+                var entries = context.ChangeTracker.Entries();
+
+                foreach (var entry in entries)
+                {
+                    entry.Reload();
+                    Console.WriteLine(entry.State);
+                }
+            }
+        }
     }
 }

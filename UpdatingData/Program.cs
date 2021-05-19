@@ -6,8 +6,7 @@ namespace UpdatingData
     {
         static void Main(string[] args)
         {
-            Examples.RemoveCourse();
-            Examples.RemoveAuthor();
+            Examples.ChangeTracker();
         }
     }
 }
