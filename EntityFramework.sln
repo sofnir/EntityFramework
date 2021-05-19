@@ -20,9 +20,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAnnotations", "DataAnno
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentAPI", "FluentAPI\FluentAPI.csproj", "{8B781B82-6AFE-48F7-A030-552C30EA6721}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryingLINQ", "QueryingLINQ\QueryingLINQ.csproj", "{CD56F11C-667A-4A56-9901-DF16F1CB620D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryingLINQ", "QueryingLINQ\QueryingLINQ.csproj", "{CD56F11C-667A-4A56-9901-DF16F1CB620D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadingRelatedObjects", "LoadingRelatedObjects\LoadingRelatedObjects.csproj", "{CDE8EDA2-5AD6-4A09-B7B5-118A2CC6D943}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoadingRelatedObjects", "LoadingRelatedObjects\LoadingRelatedObjects.csproj", "{CDE8EDA2-5AD6-4A09-B7B5-118A2CC6D943}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdatingData", "UpdatingData\UpdatingData.csproj", "{5AAE985B-0161-43B6-A608-60CEF7C76001}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +64,10 @@ Global
 		{CDE8EDA2-5AD6-4A09-B7B5-118A2CC6D943}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDE8EDA2-5AD6-4A09-B7B5-118A2CC6D943}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDE8EDA2-5AD6-4A09-B7B5-118A2CC6D943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AAE985B-0161-43B6-A608-60CEF7C76001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AAE985B-0161-43B6-A608-60CEF7C76001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AAE985B-0161-43B6-A608-60CEF7C76001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AAE985B-0161-43B6-A608-60CEF7C76001}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
