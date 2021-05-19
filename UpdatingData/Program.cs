@@ -6,9 +6,7 @@ namespace UpdatingData
     {
         static void Main(string[] args)
         {
-            Examples.AddCourseWithAuthorObject();
-            Examples.AddCourseWithAuthorId();
-            Examples.AddCourseWithAttachedAuthor();            
+            Examples.UpdateCourse();            
         }
     }
 }

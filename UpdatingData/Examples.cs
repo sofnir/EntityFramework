@@ -63,5 +63,18 @@ namespace UpdatingData
                 context.SaveChanges();
             }
         }
+
+        public static void UpdateCourse()
+        {
+            using (var context = new PlutoContext())
+            {
+                var course = context.Courses.Find(4);
+
+                course.Name = "New Name";
+                course.AuthorId = 2;
+
+                context.SaveChanges();
+            }
+        }
     }
 }
