@@ -6,7 +6,8 @@ namespace UpdatingData
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var seeder = new Seeder();
+            seeder.Seed();
         }
     }
 }
