@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -72,6 +73,30 @@ namespace UpdatingData
 
                 course.Name = "New Name";
                 course.AuthorId = 2;
+
+                context.SaveChanges();
+            }
+        }
+
+        public static void RemoveCourse()
+        {
+            using (var context = new PlutoContext())
+            {
+                var course = context.Courses.Find(6);
+
+                context.Courses.Remove(course);
+
+                context.SaveChanges();
+            }
+        }
+        public static void RemoveAuthor()
+        {
+            using (var context = new PlutoContext())
+            {
+                var author = context.Authors.Include(a => a.Courses).Single(a => a.Id == 2);
+
+                context.Courses.RemoveRange(author.Courses);
+                context.Authors.Remove(author);
 
                 context.SaveChanges();
             }
